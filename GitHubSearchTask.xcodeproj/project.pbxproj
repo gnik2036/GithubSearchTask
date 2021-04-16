@@ -13,6 +13,12 @@
 		4C9B7E9726289716000F02AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B7E9526289716000F02AA /* Main.storyboard */; };
 		4C9B7E992628971A000F02AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B7E982628971A000F02AA /* Assets.xcassets */; };
 		4C9B7E9C2628971A000F02AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B7E9A2628971A000F02AA /* LaunchScreen.storyboard */; };
+		4C9B7EAD2629C5C9000F02AA /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B7EAC2629C5C9000F02AA /* UserDefaultsManager.swift */; };
+		4C9B7EB02629C683000F02AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B7EAF2629C683000F02AA /* Constants.swift */; };
+		4C9B7EB32629C775000F02AA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B7EB22629C775000F02AA /* APIManager.swift */; };
+		4C9B7EB72629C807000F02AA /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B7EB62629C807000F02AA /* RepositoryModel.swift */; };
+		4C9B7EBB2629C818000F02AA /* CommitsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B7EBA2629C818000F02AA /* CommitsModel.swift */; };
+		4C9B7EC02629D730000F02AA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B7EBF2629D730000F02AA /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		4C9B7E982628971A000F02AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C9B7E9B2628971A000F02AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C9B7E9D2628971A000F02AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C9B7EAC2629C5C9000F02AA /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		4C9B7EAF2629C683000F02AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4C9B7EB22629C775000F02AA /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		4C9B7EB62629C807000F02AA /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
+		4C9B7EBA2629C818000F02AA /* CommitsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsModel.swift; sourceTree = "<group>"; };
+		4C9B7EBF2629D730000F02AA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,77 @@
 		4C9B7E8E26289716000F02AA /* GitHubSearchTask */ = {
 			isa = PBXGroup;
 			children = (
-				4C9B7E8F26289716000F02AA /* AppDelegate.swift */,
-				4C9B7E9126289716000F02AA /* SceneDelegate.swift */,
+				4C9B7EBE2629D70E000F02AA /* Extensions */,
+				4C9B7EB52629C7F1000F02AA /* Model */,
+				4C9B7EAB2629C5A2000F02AA /* Services */,
+				4C9B7EAA2629C56F000F02AA /* Network */,
+				4C9B7EA92629C553000F02AA /* Utilities */,
+				4C9B7EA82629C518000F02AA /* Views */,
+				4C9B7EA72629C3DD000F02AA /* AppSetting */,
 				4C9B7E9326289716000F02AA /* ViewController.swift */,
-				4C9B7E9526289716000F02AA /* Main.storyboard */,
-				4C9B7E982628971A000F02AA /* Assets.xcassets */,
-				4C9B7E9A2628971A000F02AA /* LaunchScreen.storyboard */,
 				4C9B7E9D2628971A000F02AA /* Info.plist */,
 			);
 			path = GitHubSearchTask;
+			sourceTree = "<group>";
+		};
+		4C9B7EA72629C3DD000F02AA /* AppSetting */ = {
+			isa = PBXGroup;
+			children = (
+				4C9B7E8F26289716000F02AA /* AppDelegate.swift */,
+				4C9B7E982628971A000F02AA /* Assets.xcassets */,
+				4C9B7E9126289716000F02AA /* SceneDelegate.swift */,
+			);
+			path = AppSetting;
+			sourceTree = "<group>";
+		};
+		4C9B7EA82629C518000F02AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C9B7E9526289716000F02AA /* Main.storyboard */,
+				4C9B7E9A2628971A000F02AA /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4C9B7EA92629C553000F02AA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4C9B7EAF2629C683000F02AA /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4C9B7EAA2629C56F000F02AA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4C9B7EB22629C775000F02AA /* APIManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4C9B7EAB2629C5A2000F02AA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4C9B7EAC2629C5C9000F02AA /* UserDefaultsManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4C9B7EB52629C7F1000F02AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C9B7EB62629C807000F02AA /* RepositoryModel.swift */,
+				4C9B7EBA2629C818000F02AA /* CommitsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C9B7EBE2629D70E000F02AA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4C9B7EBF2629D730000F02AA /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +211,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C9B7EB32629C775000F02AA /* APIManager.swift in Sources */,
+				4C9B7EC02629D730000F02AA /* Extensions.swift in Sources */,
+				4C9B7EB02629C683000F02AA /* Constants.swift in Sources */,
+				4C9B7EBB2629C818000F02AA /* CommitsModel.swift in Sources */,
 				4C9B7E9426289716000F02AA /* ViewController.swift in Sources */,
 				4C9B7E9026289716000F02AA /* AppDelegate.swift in Sources */,
+				4C9B7EAD2629C5C9000F02AA /* UserDefaultsManager.swift in Sources */,
+				4C9B7EB72629C807000F02AA /* RepositoryModel.swift in Sources */,
 				4C9B7E9226289716000F02AA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
